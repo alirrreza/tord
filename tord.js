@@ -8,29 +8,23 @@
 */
 function isTor()
 {
-	var e=document.createElement("canvas");
-	var t=e.getContext("2d");
-	var n="abcdefghijklmnopqrstuvwxyz@";
-	t.textBaseline="top";
-	t.font="14px Arial";
-	t.textBaseline="alphabetic";
-	t.fillStyle="#f60";
-	t.fillRect(125,1,62,20);
-	t.fillStyle="#069";
-	t.fillText(n,2,15);
-	t.fillStyle="rgba(102, 204, 0, 0.7)";
-	t.strokeText(n,4,17);
-	var r=e.toDataURL("image/png");
-	//console.log(r);
-	var i=calcMD5(r);
-	if(i==="da81253a9cf9ddb1a7412512f7e2a29d")
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+  var e=document.createElement("canvas");
+  var t=e.getContext("2d");
+  t.textBaseline="top";
+  t.font="14px Arial";
+  t.textBaseline="alphabetic";
+  t.fillText("alirrreza",2,15);
+  var r=e.toDataURL("image/png");
+  //console.log(r);
+  var i=calcMD5(r);
+  if(i==="da81253a9cf9ddb1a7412512f7e2a29d")
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -206,4 +200,3 @@ function calcMD5(str)
   }
   return rhex(a) + rhex(b) + rhex(c) + rhex(d);
 }
-
